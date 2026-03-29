@@ -1,59 +1,204 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-<meta charset="UTF-8">
-<title>Mundo Pet</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benjamin Pet Shop - Home</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <span class="text-warning">Benjamin</span> Pet Shop
+    </a>
 
-<h1>Mundo Pet</h1>
-<p>Seu petshop online</p>
+    <div class="saudacao-nav d-none d-md-inline-block" id="mensagemBoasVindas">
+      Bem-vinda!
+    </div>
 
-<nav>
-<a href="index.html">Home</a> |
-<a href="acessorios.html">Acessórios</a> |
-<a href="racoes.html">Rações</a> |
-<a href="higiene.html">Higiene</a> |
-<a href="servicos.html">Serviços</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-warning btn-sm ms-lg-3 text-dark fw-bold rounded-pill px-4" href="cadastro.html">
+            Agendar Online
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-</header>
+<!-- CAROUSEL -->
+<div id="petCarousel" class="carousel slide shadow" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="imagens/familia.png" class="d-block w-100" alt="Família Benjamin Pet">
+    </div>
+    <div class="carousel-item">
+      <img src="imagens/banho.png" class="d-block w-100" alt="Banho e Tosa">
+    </div>
+    <div class="carousel-item">
+      <img src="imagens/busca.png" class="d-block w-100" alt="Taxi Dog Benjamin">
+    </div>
+  </div>
 
-<hr>
+  <button class="carousel-control-prev" type="button" data-bs-target="#petCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
 
-<h2>Bem-vindo ao Mundo Pet</h2>
+  <button class="carousel-control-next" type="button" data-bs-target="#petCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
 
-<p>
-Aqui você encontra produtos e serviços de qualidade para o seu pet.
-Nosso petshop oferece acessórios, rações e produtos de higiene,
-além de serviços de banho e tosa.
-</p>
+<!-- SERVIÇOS -->
+<div class="container py-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Nossas Especialidades ❤️</h2>
+    <p class="lead text-muted">Cuidado humanizado e seguro para quem você ama.</p>
+  </div>
 
-<hr>
+  <div class="row g-4 text-center">
 
-<footer>
+    <!-- BANHO -->
+    <div class="col-md-4" onclick="location.href='cadastro.html'">
+      <div class="card card-servico p-4 shadow-sm h-100">
+        <div class="icon-box">
+          <i class="bi bi-droplet-fill"></i>
+        </div>
+        <h4 class="fw-bold">Banho Relaxante</h4>
+        <p class="text-muted">Produtos hipoalergênicos e secagem cuidadosa.</p>
+      </div>
+    </div>
 
-<p>Projeto acadêmico – Mundo Pet</p>
-<p>Aluna: Fabianna C A de Paula</p>
-<p>Contato: atendimento@mundopet.com</p>
-<p>Telefone: (11) 97400-0000</p>
+    <!-- TOSA -->
+    <div class="col-md-4" onclick="location.href='cadastro.html'">
+      <div class="card card-servico p-4 shadow-sm h-100">
+        <div class="icon-box">
+          <i class="bi bi-scissors"></i>
+        </div>
+        <h4 class="fw-bold">Tosa Especializada</h4>
+        <p class="text-muted">Tosa higiênica e estética profissional.</p>
+      </div>
+    </div>
 
+    <!-- TAXI -->
+    <div class="col-md-4" onclick="location.href='cadastro.html'">
+      <div class="card card-servico p-4 shadow-sm h-100">
+        <div class="icon-box">
+          <i class="bi bi-truck"></i>
+        </div>
+        <h4 class="fw-bold">Taxi Dog</h4>
+        <p class="text-muted">Buscamos e levamos seu pet com segurança.</p>
+      </div>
+    </div>
 
-<h3>Navegação</h3>
+  </div>
+</div>
 
-<a href="index.html">Home</a>
-<a href="racao.html">Rações</a>
-<a href="acessorios.html">Acessórios</a>
-<a href="higiene.html">Higiene</a>
-<a href="servicos.html">Serviços</a>
-  
+<!-- FOOTER -->
+<footer class="bg-custom-dark pt-5 pb-4">
+  <div class="container">
+    <div class="row">
 
+      <div class="col-md-7 mb-4">
+        <h5>Sobre o Benjamin</h5>
+        <p class="pe-md-5 opacity-75">
+          O Benjamin Pet Shop nasceu inspirado no carinho e na conexão especial que temos com os animais.
+        </p>
+
+        <span class="destaque-atendimento">
+          <i class="bi bi-heart-fill me-2"></i> Atendimento para Cães e Gatos
+        </span>
+
+        <p>
+          <i class="bi bi-geo-alt-fill text-warning me-2"></i>
+          Av. Paulista, 1234 – São Paulo, SP
+        </p>
+
+        <p>
+          <i class="bi bi-card-text text-warning me-2"></i>
+          CNPJ: 12.345.678/0001-99
+        </p>
+      </div>
+
+      <div class="col-md-5 mb-4">
+        <h5>Fale Conosco</h5>
+
+        <p>
+          <i class="bi bi-whatsapp text-success me-2"></i>
+          (11) 98765-4321
+        </p>
+
+        <p>
+          <i class="bi bi-envelope-fill text-warning me-2"></i>
+          contato@benjaminpet.com.br
+        </p>
+
+        <h5 class="mt-4">Siga o Benjamin</h5>
+
+        <div class="social-links mt-2">
+          <a href="#" class="text-white fs-4 me-3">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" class="text-white fs-4">
+            <i class="bi bi-facebook"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-4 opacity-25">
+
+    <div class="text-center small opacity-50">
+      <p>© 2026 Benjamin Pet Shop | Projeto Acadêmico PUCRS</p>
+    </div>
+  </div>
 </footer>
 
-</body>
+<!-- MODAL -->
+<div class="modal fade" id="modalBoasVindas" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-body text-center p-5">
 
+        <div class="mb-3">
+          <i class="bi bi-heart-fill text-warning" style="font-size: 3rem;"></i>
+        </div>
+
+        <h4 class="fw-bold">Bem-vindo!</h4>
+        <p id="mensagemModal" class="text-muted"></p>
+
+        <button class="btn btn-dark rounded-pill px-4 mt-3" data-bs-dismiss="modal">
+          Entrar no site
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
 </html>
